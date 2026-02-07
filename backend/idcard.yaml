@@ -1,0 +1,5 @@
+
+names:
+  0: id_card
+  1: person
+task: detect

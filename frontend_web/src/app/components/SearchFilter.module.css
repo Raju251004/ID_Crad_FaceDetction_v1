@@ -1,0 +1,109 @@
+.searchContainer {
+    margin-bottom: 2rem;
+}
+
+.searchBar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.75rem;
+    color: var(--foreground);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+.searchInput::placeholder {
+    color: rgba(248, 250, 252, 0.4);
+}
+
+.filterToggle {
+    padding: 0.875rem 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.75rem;
+    color: var(--foreground);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filterToggle:hover {
+    background: var(--card);
+    border-color: var(--primary);
+}
+
+.filterPanel {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dateFilters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--foreground);
+}
+
+.dateInput {
+    padding: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.5rem;
+    color: var(--foreground);
+    font-size: 0.875rem;
+}
+
+.dateInput:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.filterActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.filterActions button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}

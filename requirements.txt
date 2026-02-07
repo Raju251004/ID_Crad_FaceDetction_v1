@@ -1,0 +1,12 @@
+ultralytics
+opencv-python
+insightface
+onnxruntime
+numpy
+scikit-learn
+fastapi
+uvicorn
+sqlmodel
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart

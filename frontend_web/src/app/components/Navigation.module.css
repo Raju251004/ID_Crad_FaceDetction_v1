@@ -1,0 +1,72 @@
+.nav {
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+    margin: 1rem 2rem;
+    border-radius: 1.25rem;
+}
+
+.navContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--primary);
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navButton {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.navButton:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.navButton:active {
+    transform: translateY(0);
+}
+
+.active {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+}
+
+.loginBtn {
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    border: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.loginBtn:hover {
+    background: linear-gradient(135deg, #7dd3fc 0%, #a5b4fc 100%);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    color: #000;
+}

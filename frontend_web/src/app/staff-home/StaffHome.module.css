@@ -1,0 +1,77 @@
+.container {
+    padding: 6rem 10% 4rem 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #10b981, #38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header p {
+    opacity: 0.6;
+    font-size: 1.1rem;
+}
+
+.buttonGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.actionCard {
+    padding: 3.5rem 2.5rem;
+    border-radius: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.actionCard:hover {
+    transform: translateY(-12px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px -20px rgba(56, 189, 248, 0.3);
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.actionCard h2 {
+    font-size: 1.75rem;
+}
+
+.actionCard p {
+    font-size: 0.95rem;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 4rem 5%;
+    }
+
+    .buttonGrid {
+        grid-template-columns: 1fr;
+    }
+}

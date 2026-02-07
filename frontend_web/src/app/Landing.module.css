@@ -1,0 +1,265 @@
+.landing {
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 1rem;
+}
+
+.navContent {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.navLink:hover {
+    opacity: 1;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 10% 8rem 10%;
+    gap: 4rem;
+}
+
+.heroContent {
+    flex: 1;
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.gradientText {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.heroVisual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visualPlate {
+    width: 400px;
+    height: 250px;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.scanningLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--primary), transparent);
+    animation: scan 3s infinite linear;
+    box-shadow: 0 0 15px var(--primary);
+    z-index: 2;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.mockInterface {
+    padding: 1.5rem;
+}
+
+.mockHeader {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--glass-border);
+}
+
+.mockRow {
+    height: 1rem;
+    background: var(--glass-border);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.mockRow:nth-child(2) {
+    width: 70%;
+}
+
+.mockRow:nth-child(3) {
+    width: 40%;
+}
+
+.portalSection {
+    padding: 8rem 10%;
+    text-align: center;
+}
+
+.sectionHeader {
+    margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.sectionHeader p {
+    opacity: 0.6;
+}
+
+.portalGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portalCard {
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.portalCard:hover {
+    transform: translateY(-10px);
+}
+
+.portalIcon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.portalCard h3 {
+    font-size: 1.5rem;
+}
+
+.portalCard p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.portalBtn {
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer {
+    padding: 4rem 10%;
+    border-top: 1px solid var(--glass-border);
+    text-align: center;
+}
+
+.footerContent p {
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .heroContent {
+        max-width: 100%;
+    }
+
+    .description {
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .ctaGroup {
+        justify-content: center;
+    }
+
+    .visualPlate {
+        width: 100%;
+        max-width: 400px;
+    }
+}

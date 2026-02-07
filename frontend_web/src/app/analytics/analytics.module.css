@@ -1,0 +1,143 @@
+/* Main Container */
+.container {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #1a1f3c 0%, #0a0b14 100%);
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+/* Header Section */
+.header {
+    padding: 2rem;
+    margin-top: 60px;
+    /* Space for Navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Stats Summary Cards */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.statCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.statTitle {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.trendUp {
+    color: #4ade80;
+}
+
+.trendDown {
+    color: #f87171;
+}
+
+.trendIcon {
+    font-size: 1.2rem;
+}
+
+/* Charts Layout */
+.chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    /* Two rows */
+    gap: 1.5rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+/* Large Chart (Main Trend) spans full width */
+.colSpan12 {
+    grid-column: span 12;
+}
+
+/* Half width charts */
+.colSpan6 {
+    grid-column: span 6;
+}
+
+/* Third width charts */
+.colSpan4 {
+    grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+
+    .colSpan6,
+    .colSpan4 {
+        grid-column: span 12;
+    }
+}
+
+.chartCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chartTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
